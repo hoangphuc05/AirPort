@@ -66,13 +66,14 @@ public:
 				landing_queue->the_queue.pop();
 
 				// FIXME: calculate the wait time of the plane in the landing queue
+				int waitTime = clock - plane->arrival_time;
 
 
 				
 
 				// FIXME: update total_wait and num_served for the landing queue
 				landing_queue->num_served++;
-				landing_queue->total_wait += currentPlaneWait;
+				landing_queue->total_wait += waitTime;
 				
 
 
